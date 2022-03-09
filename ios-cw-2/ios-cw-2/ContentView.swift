@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var name = "logo"
+    @State var imageNme = "logo"
     var body: some View {
         VStack(spacing:10){
             Group {
@@ -16,7 +16,7 @@ struct ContentView: View {
                     Text("ما هو المسار المفضل لديك")
                         .font(.largeTitle)
                         .bold()
-                    Image(name)
+                    Image(imageNme)
                         .resizable()
                         .scaledToFit()
                 }
@@ -27,26 +27,44 @@ struct ContentView: View {
                 VStack {
                     Text("IOS")
                         .frame(width: 250, height: 60)
-                        .background(.black)// bonus change it to cyan
+                        .background(.red)// bonus change it to cyan
                         .clipShape(RoundedRectangle(cornerRadius: 35))
+                        .onTapGesture {
+                            imageNme = "apple"
+                          
+                        }
                         // cahnge name to iOS
 
                     Text("Gamedev")
                         .frame(width: 250, height: 60)
-                        .background(.black)// bonus change it to red
+                        .background(.purple)// bonus change it to red
                         .clipShape(RoundedRectangle(cornerRadius: 35))
+                        .onTapGesture {
+                            imageNme = "gamedev"
+                            
+                        }
                         // cahnge name to Gamedev
 
                     Text("Web")
                         .frame(width: 250, height: 60)
-                        .background(.black)// bonus change it to blue
+                        .background(.blue)// bonus change it to blue
                         .clipShape(RoundedRectangle(cornerRadius: 35))
+                        .onTapGesture {
+                            imageNme = "web"
+                            
+                        }
+                    
                         // cahnge name to web
                         
-                    Text("Android")
+                    Text("Of course it's Android")
+                        .fontWeight(.thin)
                         .frame(width: 250, height: 60)
-                        .background(.black)// bonus change it to green
+                        .background(.green)// bonus change it to green
                         .clipShape(RoundedRectangle(cornerRadius: 35))
+                        .onTapGesture {
+                            imageNme = "android"
+                            
+                        }
                         // cahnge name to Android
                 }
             
